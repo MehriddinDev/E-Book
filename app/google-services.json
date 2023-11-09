@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1000968868823",
+    "project_id": "book-app-be8ac",
+    "storage_bucket": "book-app-be8ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000968868823:android:eb872c7bdec09e0bbaf192",
+        "android_client_info": {
+          "package_name": "uz.gita.bookapp_mehriddin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000968868823-9tp9krpluunc3sf2n3g3ljp7pg9f6ijs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSnKZSBu4y4lqJpfbUye5g38kODEjbORc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1000968868823-9tp9krpluunc3sf2n3g3ljp7pg9f6ijs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

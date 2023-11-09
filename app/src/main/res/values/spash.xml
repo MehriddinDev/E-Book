@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SplashScreen.MyApp" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#F0F6FB</item>
+    </style>
+</resources>

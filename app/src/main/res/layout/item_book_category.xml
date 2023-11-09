@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="5dp"
+    app:cardBackgroundColor="@color/bg_main"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/containerBook"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginVertical="10dp"
+            android:src="@drawable/ic_launcher_background"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgBook"
+                android:layout_width="70dp"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/txtBookName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="6dp"
+            android:text="Iymon"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/containerBook"
+            app:layout_constraintTop_toTopOf="@id/containerBook"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/txtBookAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Iymon"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/txtBookName"
+            app:layout_constraintTop_toBottomOf="@id/txtBookName"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <ProgressBar
+            android:id="@+id/progressRead"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_marginBottom="12dp"
+            android:max="100"
+            android:progress="10"
+            app:layout_constraintBottom_toBottomOf="@id/containerBook"
+            app:layout_constraintEnd_toStartOf="@id/txtReadPersent"
+            app:layout_constraintStart_toEndOf="@id/containerBook"
+            app:trackColor="#050000" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/containerRead"
+            android:layout_width="70dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:layout_height="26dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="@id/progressRead"
+            app:layout_constraintTop_toTopOf="@id/progressRead"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:id="@+id/containerReadF"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/btnRead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="read"
+                    android:textAllCaps="false"
+                    android:textColor="@color/green"
+                    android:textSize="14sp" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtReadPersent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:text="16%"
+            app:layout_constraintBottom_toBottomOf="@id/progressRead"
+            app:layout_constraintEnd_toStartOf="@id/containerRead"
+            app:layout_constraintTop_toTopOf="@id/progressRead" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

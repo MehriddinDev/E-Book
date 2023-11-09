@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/screenHome">
+    <fragment
+        android:id="@+id/screenHome"
+        tools:layout="@layout/screen_home"
+        android:name="uz.gita.bookapp_mehriddin.presentation.ui.screens.homeF.home.ScreenHome"
+        android:label="ScreenHome" >
+        <action
+            android:id="@+id/action_screenHome_to_descriptionActivity"
+            app:destination="@id/descriptionActivity"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_screenHome_to_searchActivity"
+            app:destination="@id/searchActivity" />
+        <action
+            android:id="@+id/action_screenHome_to_categoryScreen"
+            app:destination="@id/categoryScreen" />
+
+    </fragment>
+
+    <activity
+        android:id="@+id/descriptionActivity"
+        android:name="uz.gita.bookapp_mehriddin.presentation.ui.screens.homeF.description.DescriptionActivity"
+        android:label="activity_description"
+        tools:layout="@layout/activity_description" >
+        <argument
+            android:name="book"
+            app:argType="uz.gita.bookapp_mehriddin.data.BookData" />
+    </activity>
+    <activity
+        android:id="@+id/searchActivity"
+        android:name="uz.gita.bookapp_mehriddin.presentation.ui.screens.search.SearchActivity"
+        android:label="activity_search"
+        tools:layout="@layout/activity_search" />
+    <fragment
+        android:id="@+id/categoryScreen"
+        tools:layout="@layout/screen_category"
+        android:name="uz.gita.bookapp_mehriddin.presentation.ui.screens.homeF.category.CategoryScreen"
+        android:label="CategoryScreen" />
+    <activity
+        android:id="@+id/readBookActivity"
+        tools:layout="@layout/screen_read_book"
+        android:name="uz.gita.bookapp_mehriddin.presentation.ui.screens.homeF.readbook.ReadBookActivity"
+        android:label="ReadBookActivity" />
+
+</navigation>
